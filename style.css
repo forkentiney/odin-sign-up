@@ -2,7 +2,7 @@
   --bg-dark: hsl(240 9% 13%);
   --shadow: hsl(240 9% 5%);
   --text: hsl(240 10% 94%);
-  --titles: hsl(240 10% 100%);
+  --titles: hsl(35 55% 90%);
   --bg-light: hsl(240 9% 26%);
   --text-muted: hsl(240 10% 80%);
   --primary: hsl(224 38% 55%);
@@ -39,11 +39,95 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 900;
+  text-shadow: 4px 4px 12px var(--shadow);
 }
 
 h2 {
   font-size: 1.5em;
   font-weight: 700;
+}
+
+#viewport {
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+#body {
+  display: flex;
+}
+
+#hero {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  width: 34vw;
+  background-color: transparent;
+  background-image: url("static/images/resort.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 8px 0px 12px var(--shadow);
+  border-right: 2px solid var(--shadow);
+  padding-top: 25vh;
+}
+
+#content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 66vw;
+  min-height: 100vh;
+}
+
+#footer {
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 14px;
+  border-top: 2px solid var(--shadow);
+}
+
+.license, .credit, .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.license {
+  grid-column: 1;
+}
+
+.credit {
+  grid-column: 2;
+}
+
+.contact {
+  grid-column: 3;
+}
+
+.license a,
+.icon {
+  margin: 1rem;
+  height: 2rem;
+  width: auto;
+}
+
+.icon {
+  height: 24px;
+  width: auto;
+  color: var(--danger);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
 }
