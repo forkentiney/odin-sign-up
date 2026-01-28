@@ -35,13 +35,19 @@ body {
 }
 
 h1, h2, h3, h4 {
-  color: var(--titles);
+  color: hsl(148 53% 85%);
 }
 
 h1 {
   font-size: 3em;
   font-weight: 900;
-  text-shadow: 4px 4px 12px var(--shadow);
+  text-shadow: 4px 4px 8px var(--shadow);
+  backdrop-filter: blur(4px) brightness(90%);
+  padding: 8px 24px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid var(--shadow);
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px var(--shadow);
 }
 
 h2 {
