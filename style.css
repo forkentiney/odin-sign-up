@@ -81,15 +81,17 @@ h2 {
   background-size: cover;
   box-shadow: 8px 0px 12px var(--shadow);
   border-right: 2px solid var(--shadow);
-  padding-top: 25vh;
+  padding: 25vh 1em;
 }
 
 #content {
   z-index: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 66vw;
   min-height: 100vh;
+  padding: 2em;
 }
 
 #footer {
